@@ -1,2 +1,4 @@
-Atividade 01
-👍
+# Lab 01a - Hello World
+Envie um código na linguagem C para o Git que execute o Hello World.
+
+Para essa entrega um dos critérios de avaliação é que todos os membros do grupo estejam adicionados no repositório do Git.
