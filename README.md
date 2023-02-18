@@ -1,3 +1,3 @@
 # Computacao_Paralela
 
-☝️ TESTE LAB01A
+LAB01A: Hello World!
