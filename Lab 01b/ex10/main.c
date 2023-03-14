@@ -18,9 +18,9 @@ int main() {
     printf("Matriz original\n");
     for (i = 0; i < linhas; i++) {
         for (j = 0; j < colunas; j++) {
-            printf(%d , matriz[i][j]);
+            printf("%d ", matriz[i][j]);
         }
-        printf(n);
+        printf("\n");
     }
 
     printf("Digite 1 para multiplicar uma linha ou 2 para multiplicar uma coluna: ");
@@ -58,7 +58,7 @@ int main() {
 
         for (i = 0; i < linhas; i++) {
             for (j = 0; j < colunas; j++) {
-                printf(%d , matriz[i][j]);
+                printf("%d ", matriz[i][j]);
             }
             printf("\n");
         }
