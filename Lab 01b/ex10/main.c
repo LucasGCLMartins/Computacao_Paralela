@@ -1,6 +1,6 @@
-#include stdio.h
-#include time.h
-#include stdlib.h
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
 
 #define LINHA 5
@@ -10,14 +10,14 @@ int main() {
     int matriz[LINHA][COLUNA];
     int linhas=5, colunas=5, i, j, num, option;
 
-    for (i = 0; i  linhas; i++) {
-        for (j = 0; j  colunas; j++) {
+    for (i = 0; i < linhas; i++) {
+        for (j = 0; j < colunas; j++) {
             matriz[i][j]=rand()%100;
         }
     }
     printf(Matriz originaln);
-    for (i = 0; i  linhas; i++) {
-        for (j = 0; j  colunas; j++) {
+    for (i = 0; i < linhas; i++) {
+        for (j = 0; j < colunas; j++) {
             printf(%d , matriz[i][j]);
         }
         printf(n);
@@ -36,14 +36,14 @@ int main() {
         scanf(%d, &lin);
 
          Multiplica a linha pelo número
-        for (j = 0; j  colunas; j++) {
+        for (j = 0; j < colunas; j++) {
             matriz[lin][j] = num;
         }
 
          Imprime a matriz resultante
         printf(Matriz resultanten);
-        for (i = 0; i  linhas; i++) {
-            for (j = 0; j  colunas; j++) {
+        for (i = 0; i < linhas; i++) {
+            for (j = 0; j < colunas; j++) {
                 printf(%d , matriz[i][j]);
             }
             printf(n);
@@ -59,8 +59,8 @@ int main() {
         }
 
         printf(Matriz resultanten);
-        for (i = 0; i  linhas; i++) {
-            for (j = 0; j  colunas; j++) {
+        for (i = 0; i < linhas; i++) {
+            for (j = 0; j < colunas; j++) {
                 printf(%d , matriz[i][j]);
             }
             printf(n);
