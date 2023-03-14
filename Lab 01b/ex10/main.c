@@ -36,7 +36,7 @@ int main() {
         scanf("%d", &lin);
 
         for (j = 0; j < colunas; j++) {
-            matriz[lin][j] *= num;
+            matriz[lin-1][j] *= num;
         }
 
 
@@ -53,7 +53,7 @@ int main() {
         scanf("%d", &col);
 
         for (i = 0; i < linhas; i++) {
-            matriz[i][col] *= num;
+            matriz[i][col-1] *= num;
         }
 
         for (i = 0; i < linhas; i++) {
