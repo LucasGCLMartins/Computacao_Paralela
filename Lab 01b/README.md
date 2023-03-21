@@ -4,4 +4,5 @@ Resolva os exercícios em:  http://www.inf.pucrs.br/%7Epinho/PRGSWB/Exercicios/I
 A entrega deve ser realizada através do link do repositório Git de acesso público conforme descrito nas instruções do curso. Nomeie os arquivos de acordo com o número do exercício, p.explo., exercicio1.c, exercicio9.c, etc.
 
 # Como executar o código
+  - Cada programa está na main da sua pasta
   - Para executar é necessario primeiro compilar o codigo, após isso somente será preciso rodar o executável 
