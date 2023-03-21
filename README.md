@@ -5,4 +5,6 @@
   - Guilherme Santos de Oliveira - 32126344
 # Aulas
 LAB01A: Hello World!<br>
-LAB01B: Exercicios em C.
+LAB01B: Exercicios em C.<br>
+LAB02:  Processos.<br>
+
