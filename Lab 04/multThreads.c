@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #define M 3
-#define NUM_THREADS 10
+#define NUM_THREADS 2
 
 int A [M][M] = { {1,2,3}, {4,5,6}, {7,8,9} };
 int B [M][M] = { {9,8,7}, {6,5,4}, {3,2,1} };
