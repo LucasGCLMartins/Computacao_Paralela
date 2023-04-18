@@ -6,7 +6,7 @@ Considere o trecho de código em anexo para resolver o problema da multiplicaç�
   - Para executar é necessario primeiro compilar o codigo, após isso somente será preciso rodar o executável 
 
 # Tempo de execucao
- - Foram executadas 3 vezes as funcoes de multiplicacao de matriz e calculadas as medias
+ - Foram executadas 3 vezes as funcoes de multiplicacao de matriz e vetor e calculadas as medias
 
 <table>
 <tr><th>Serial </th><th>Paralelo</th></tr>
