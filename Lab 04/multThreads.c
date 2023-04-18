@@ -23,10 +23,6 @@ int main()
     for (thread = 0; thread < qtde; thread++)
     {
         pthread_create(&threads[thread], NULL, Pth_mat_vct,(void*)  thread); //cria e executa as threads na funcao Pth_mat_vct
-    }
-
-    for(thread = 0; thread < qtde; thread++)
-    {
         pthread_join(threads[thread],NULL); //espera a thread terminar
     }
 
