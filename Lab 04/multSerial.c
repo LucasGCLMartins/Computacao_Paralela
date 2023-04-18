@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define M 3
+#define M 3 //tamanhos das matrizes/vetores
 
-int A[M][M] = { {1,2,3}, {4,5,6}, {7,8,9} };
-int B[M][M] = { {9,8,7}, {6,5,4}, {3,2,1} };
-int C[M][M];
+int A[M][M] = {{1,2,3}, {4,5,6}, {7,8,9}};
+int B[M] = {9,8,7};
+int C[M] = {0,0,0};
 
 int main()
 {
@@ -13,15 +13,15 @@ int main()
     {
         for (int j = 0; j < M; j++)
         {
-            C[i][j] = 0;
+            C[i] = 0;
 
             for (int k = 0; k < M; k++)
             {
-                C[i][j] += A[i][k] * B[k][j];
+                C[i] += A[i][k] * B[k];
             }
-            printf("%d\t", C[i][j]);
+
         }
-        printf("\n");
+        printf("%d ", C[i]); //esperado 46 118 190
     }
     return 0;
 }

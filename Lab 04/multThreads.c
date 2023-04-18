@@ -2,70 +2,57 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define M 3
-#define NUM_THREADS 2
+#define qtde 2 //quantidade de threads
+#define M 3 //tamanho das matrizes/vetores
 
-int A [M][M] = { {1,2,3}, {4,5,6}, {7,8,9} };
-int B [M][M] = { {9,8,7}, {6,5,4}, {3,2,1} };
-int C [M][M];
+int A[M][M] = {{1,2,3}, {4,5,6}, {7,8,9}};
+int B[M] = {9,8,7};
+int C[M] = {0,0,0};
 
-struct v
+
+void *Pth_mat_vct(void *rank);
+
+int main()
 {
-    int i; /* Fileira */
-    int j; /* Coluna */
-};
+    long thread; //thread que ficara no vetor
 
-//Programa usando as threads que multiplica cada elemento da fileira pelo da coluna
-void *runner(void *param)
-{
-    struct v *data = param; //Estrutura que armazena os dados
-    int n, sum = 0; //Contador e soma
+    pthread_t *threads;
 
-    //Fileira multiplicada pela coluna
-    for(n = 0; n< M; n++)
+    threads = malloc(qtde * sizeof(pthread_t)); //cria threads com base na quantidade
+
+    for (thread = 0; thread < qtde; thread++)
     {
-        sum += A[data->i][n] * B[n][data->j];
+        pthread_create(&threads[thread], NULL, Pth_mat_vct,(void*)  thread); //cria e executa as threads na funcao Pth_mat_vct
     }
-    //Coloca a soma no local certo
-    C[data->i][data->j] = sum;
 
-    //Sai da thread
+    for(thread = 0; thread < qtde; thread++)
+    {
+        pthread_join(threads[thread],NULL); //espera a thread terminar
+    }
+
+    for(int i=0; i<M; i++)
+    {
+        printf("%d ",C[i]); //imprime esperado 46 118 190
+    }
+
+    return 0;
+}
+
+void *Pth_mat_vct(void* rank)
+{
+    long my_rank = (long) rank;
+    int local_m = M/qtde;
+    int my_first_row = my_rank*local_m;
+    int my_last_row = (my_rank+1)*local_m;
+
+    for(int i=my_first_row; i<=my_last_row; i++)
+    {
+        C[i] = 0;
+        for (int j=0; j<=M ; j++)
+        {
+            C[i]+= A[i][j]*B[j]; //calcula a multiplicao da Matriz A com o vetor B e coloca no vetor resposta C
+        }
+    }
+
     pthread_exit(0);
 }
-
-int main(int argc, char *argv[])
-{
-    int i,j, count = 0;
-    for(i = 0; i < M; i++)
-    {
-        for(j = 0; j < M; j++)
-        {
-            //Coloca uma fileira e uma coluna em cada thread
-            struct v *data = (struct v *) malloc(sizeof(struct v));
-            data->i = i;
-            data->j = j;
-            /* Cria a thread passando os seus dados como paramentro */
-            pthread_t tid;       //ID da Thread
-            pthread_attr_t attr; //Atributos da thread
-            //Atributos ininciais
-            pthread_attr_init(&attr);
-            //Cria a thread
-            pthread_create(&tid,&attr,runner,data);
-            //Processo pai espera
-            pthread_join(tid, NULL);
-            count++;
-        }
-    }
-
-    //Imprime a matriz
-    for(i = 0; i < M; i++)
-    {
-        for(j = 0; j < M; j++)
-        {
-            printf("%d ", C[i][j]);
-        }
-        printf("\n");
-    }
-}
-
-
