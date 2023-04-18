@@ -29,5 +29,7 @@ Considere o trecho de código em anexo para resolver o problema da multiplicaç�
 </td></tr> </table>
 
 # Speedup
-S = T(1)/T(N) => S = 0,001/0,0016 => S = 0,625
-  
+
+$$
+S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{0,001}{0,0016}=> S<sub>p</sub> = 0,625
+$$
