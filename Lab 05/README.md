@@ -1,4 +1,4 @@
-# Lab 04 - Pthreads
+# Lab 05 - Trapezio
 Considere o trecho de código em anexo para resolver o problema da multiplicação matriz-vetor utilizando pthreads. Crie uma solução serial e outra paralela com dois núcleos, e para ambas apresente os tempos e o speedup.
 
 
