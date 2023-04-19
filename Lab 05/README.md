@@ -35,9 +35,9 @@ S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{0,001}{0,0013}=> S<su
 $$
 
 # Prints
-- Serial
+- Serial <br>
 ![image](https://user-images.githubusercontent.com/83303272/233197869-19884ca3-0e4b-49ee-8c3e-7ab9b3b9d988.png)
 
--Threads
+- Threads <br>
 ![image](https://user-images.githubusercontent.com/83303272/233197935-7ace6fd6-246d-4baa-b06f-f0773ad6c739.png)
 
