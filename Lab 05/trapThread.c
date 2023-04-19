@@ -27,7 +27,7 @@ void Trap(double a,double b,int n, double* global_result_p){
 	local_a = a + my_rank*local_n*h;
 	local_b = local_a + local_n*h;
 	my_result = (f(local_a) + f(local_b))/2.0;
-	for(i =1;1<=local_n-1;i++){
+	for(i =1;i<=local_n-1;i++){
 		x=local_a + i*h;
 		my_result += f(x);
 	}
