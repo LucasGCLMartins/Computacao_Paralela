@@ -9,3 +9,4 @@ LAB01B: Exercicios em C.<br>
 LAB02:  Processos.<br>
 LAB03:  Memória.<br>
 LAB04:  Pthreads.<br>
+LAB05:  Trapézio. <br>
