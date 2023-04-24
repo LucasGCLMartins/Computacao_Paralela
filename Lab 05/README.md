@@ -3,7 +3,7 @@ Entregue as soluções serial e paralela para o problema dos trapézios, juntame
 
 
 # Como executar o código
-  - Para executar é necessario primeiro compilar o codigo, após isso somente será preciso rodar o executável 
+  - Para executar é necessario primeiro compilar o codigo, após isso somente será preciso rodar o executável. Para o codigo paralelo, é necessario colocar a quantidades de threads que serão usadas na execucao. No exemplo usado abaixo, foram usadas 10
 
 # Tempo de execucao
  - Foram executadas 3 vezes o calculo dos trapezios e calculadas as medias
