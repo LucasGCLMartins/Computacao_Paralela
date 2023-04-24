@@ -15,16 +15,16 @@ Entregue as soluções serial e paralela para o problema dos trapézios, juntame
 |&nbsp;|Teste 1|Teste 2|Teste 3|Média| 
 |--|--|--|--|--|
 |Real|0,001|0,001|0,001|0,001|
-|User|0,001|0,001|0,001|0,001|
-|Sys|0,000|0,000|0,000|0,000|
+|User|0,001|0,001|0,000|0,001|
+|Sys|0,000|0,000|0,001|0,000|
   
 </td><td>
 
 |&nbsp;|Teste 1|Teste 2|Teste 3|Média| 
 |--|--|--|--|--|
-|Real|0,001|0,001|0,001|0,001|
-|User|0,002|0,001|0,001|0,0013|
-|Sys|0,000|0,000|0,000|0,000|
+|Real|0,002|0,002|0,002|0,002|
+|User|0,002|0,002|0,000|0,0013|
+|Sys|0,000|0,000|0,002|0,0006|
   
 </td></tr> </table>
 
@@ -36,10 +36,11 @@ $$
 
 # Prints
 - Serial <br>
-![image](https://user-images.githubusercontent.com/83303272/233197869-19884ca3-0e4b-49ee-8c3e-7ab9b3b9d988.png)
+![image](https://user-images.githubusercontent.com/83303272/234125920-72ab8add-ee44-45e0-af8e-f26d2fb67378.png)
 
 - Threads <br>
-![image](https://user-images.githubusercontent.com/83303272/233197935-7ace6fd6-246d-4baa-b06f-f0773ad6c739.png)
+![image](https://user-images.githubusercontent.com/83303272/234125846-2467e8cb-c085-40f5-91e6-cf53fe579b70.png)
+
 
 # Conclusao
 O uso da funcao serial retorna um valor mais exato enquanto que a paralela altera o valor conforme o numero de threads usadas.
