@@ -31,7 +31,7 @@ Entregue as soluções serial e paralela para o problema dos trapézios, juntame
 # Speedup
 
 $$
-S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{0,001}{0,0013}=> S<sub>p</sub> = 0,769
+S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{0,001}{0,002}=> S<sub>p</sub> = 0,5
 $$
 
 # Prints
