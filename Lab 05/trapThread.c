@@ -8,7 +8,7 @@ double f(double x);
 int main(int argc, char* argv[]){
 	double global_result = 0.0;
 	double a=10,b=20;
-	int n=5;
+	int n=10;
 	int thread_count = strtol(argv[1],NULL,10);
 	#pragma omp parallel num_threads(thread_count)
 	Trap(a,b,n, &global_result);
