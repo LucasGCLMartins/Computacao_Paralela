@@ -16,7 +16,7 @@ Entregue as soluções serial e paralela para o problema dos trapézios, juntame
 |--|--|--|--|--|
 |Real|0,001|0,001|0,001|0,001|
 |User|0,001|0,001|0,000|0,001|
-|Sys|0,000|0,000|0,001|0,000|
+|Sys|0,000|0,000|0,001|0,0003|
   
 </td><td>
 
