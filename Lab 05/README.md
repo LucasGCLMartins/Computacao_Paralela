@@ -41,6 +41,3 @@ $$
 - Threads <br>
 ![image](https://user-images.githubusercontent.com/83303272/234125846-2467e8cb-c085-40f5-91e6-cf53fe579b70.png)
 
-
-# Conclusao
-O uso da funcao serial retorna um valor mais exato enquanto que a paralela altera o valor conforme o numero de threads usadas.
