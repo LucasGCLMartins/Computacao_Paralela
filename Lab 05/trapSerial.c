@@ -11,7 +11,7 @@ int main(int argc, char* argv[]){
 	int n=5,x_i;
 	double h = (b-a)/n;
 	global_result = (f(a)+f(b))/2.0;
-	for(int i = 0;i<=n-1;i++){
+	for(int i = 1;i<=n-1;i++){
         x_i=a+i*h;
         global_result+=f(x_i);
 	}
