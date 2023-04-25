@@ -14,9 +14,9 @@
 
 |&nbsp;|Teste 1|Teste 2|Teste 3|Média| 
 |--|--|--|--|--|
-|Real|--|--|--|--|
-|User|--|--|--|--|
-|Sys|--|--|--|--|
+|Real|0,009|0,006|0,006|0,007|
+|User|0,009|0,005|0,003|0,0056|
+|Sys|0,000|0,000|0,004|0,0013|
   
 </td><td>
 
@@ -31,7 +31,7 @@
 # Speedup
 
 $$
-S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{--}{--}=> S<sub>p</sub> = --
+S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{0,0056}{--}=> S<sub>p</sub> = --
 $$
 
 # Execucao na AWS
