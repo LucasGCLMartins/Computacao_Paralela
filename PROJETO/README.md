@@ -1,10 +1,11 @@
 # Projeto
---
+-
 
 # Como executar o código
 - Para executar o programa SERIAL é necessario primeiro compilar o codigo, após isso somente será preciso rodar o executável
 # Patch Notes
-
+- V1: Versão Serial
+-
 # Tempo de execucao
 --
 <table>
@@ -32,3 +33,6 @@
 $$
 S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{--}{--}=> S<sub>p</sub> = --
 $$
+
+# Execucao na AWS
+- Serial <br>
