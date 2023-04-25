@@ -2,7 +2,9 @@
 --
 
 # Como executar o código
---
+- Para executar o programa SERIAL é necessario primeiro compilar o codigo, após isso somente será preciso rodar o executável
+# Patch Notes
+
 # Tempo de execucao
 --
 <table>
@@ -11,22 +13,22 @@
 
 |&nbsp;|Teste 1|Teste 2|Teste 3|Média| 
 |--|--|--|--|--|
-|Real|0,001|0,001|0,001|0,001|
-|User|0,001|0,001|0,001|0,001|
-|Sys|0,000|0,000|0,000|0,000|
+|Real|--|--|--|--|
+|User|--|--|--|--|
+|Sys|--|--|--|--|
   
 </td><td>
 
 |&nbsp;|Teste 1|Teste 2|Teste 3|Média| 
 |--|--|--|--|--|
-|Real|0,002|0,001|0,002|0,0016|
-|User|0,002|0,001|0,002|0,0016|
-|Sys|0,000|0,000|0,000|0,000|
+|Real|--|--|--|--|
+|User|--|--|--|--|
+|Sys|--|--|--|--|
   
 </td></tr> </table>
 
 # Speedup
 
 $$
-S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{0,001}{0,0016}=> S<sub>p</sub> = 0,625
+S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{--}{--}=> S<sub>p</sub> = --
 $$
