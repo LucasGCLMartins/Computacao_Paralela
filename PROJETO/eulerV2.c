@@ -26,7 +26,7 @@ void Euler(int n, double *global_result_p){
 
         local_n = n/thread_count;
 
-        for(i=(thread_count-1*500);i<=(thread_count*500);i++){
+        for(i=(my_rank-1*500);i<=(my_rank*500);i++){
             my_result+=1/(f(i));
         }
 
