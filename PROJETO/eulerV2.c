@@ -14,8 +14,8 @@ int main(int argc, char *argv[]){
         thread_count = strtol(argv[1],NULL,10);
 
         #pragma omp parallel num_threads(thread_count)
-        Euler(n,&global_result);;
-        printf("%.10000e\n",global_result);
+        Euler(n,&global_result);
+        printf("%.100e\n",global_result/2);
         return 0;
 }
 void Euler(int n, double *global_result_p){
@@ -32,7 +32,7 @@ void Euler(int n, double *global_result_p){
 
         #pragma omp critical
         *global_result_p += my_result;
-        *global_result_p = *global_result_p/2;
+        
 }
 float f(int n)  
 {  
