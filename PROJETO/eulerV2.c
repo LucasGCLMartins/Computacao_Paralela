@@ -32,6 +32,7 @@ void Euler(int n, double *global_result_p){
 
         #pragma omp critical
         *global_result_p += my_result;
+        *global_result_p = *global_result_p/2;
 }
 float f(int n)  
 {  
