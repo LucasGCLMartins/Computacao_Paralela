@@ -22,7 +22,7 @@ void Euler(int n, double *global_result_p){
         double x,my_result=0.0;
         int i,local_n;
         int my_rank = omp_get_thread_num();
-        int thread_count = omp_get_num_threads();
+        double thread_count = omp_get_num_threads();
 
         local_n = n/thread_count;
 
