@@ -32,6 +32,7 @@ void Euler(int n, double *global_result_p){
 
         #pragma omp critical
         *global_result_p += my_result;
+        *global_result_p = global_result_p/thread_count;
 }
 float f(int n)  
 {  
