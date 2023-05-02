@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
 
         #pragma omp parallel num_threads(thread_count)
         Euler(n,&global_result);
-        printf("%.100e\n",global_result/2);
+        printf("%.100e\n",global_result);
         return 0;
 }
 void Euler(int n, double *global_result_p){
@@ -26,7 +26,7 @@ void Euler(int n, double *global_result_p){
 
         local_n = n/thread_count;
 
-        for(i=0;i<=local_n;i++){
+        for(i=(thread_count-1*500);i<=(thread_count*500);i++){
             my_result+=1/(f(i));
         }
 
