@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
 
         #pragma omp parallel num_threads(thread_count)
         Euler(n,&global_result);;
-        printf("%.14e\n",n,a,b,global_result);
+        printf("%.14e\n",global_result);
         return 0;
 }
 void Euler(int n, double *global_result_p){
