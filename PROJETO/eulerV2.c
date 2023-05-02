@@ -4,7 +4,7 @@
 #include<omp.h>
 
 void Euler(int n , double *global_result_p);
-double f(double x);
+float f(double x);
 
 int main(int argc, char *argv[]){
         double global_result = 0.0;
