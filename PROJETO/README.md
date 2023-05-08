@@ -7,9 +7,9 @@ apresentar os seguintes resultados na entrega: <br>
 
 # Como executar o código
 - SERIAL:<br>
-Para executar o codigo serial, é necessario baixar a biblioteca GMP, usando o comando: sudo apt-get install libgmp3-dev
-Depois, criar o executavel com o comando: gcc -o serial serial.c -lgmp
-E por fim rodando o executavel com o comando: ./serial
+Para executar o codigo serial, é necessario baixar a biblioteca GMP, usando o comando: sudo apt-get install libgmp3-dev<br>
+Depois, criar o executavel com o comando: gcc -o serial serial.c -lgmp<br>
+E por fim rodando o executavel com o comando: ./serial<br>
 - PARALELO
 # Patch Notes
 - V1: Versão Serial e prints de execucao
