@@ -1,43 +1,40 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-#include<omp.h>
+#include <stdio.h>
+#include <gmp.h>
+#include <omp.h>
 
-void Euler(int n , double *global_result_p);
-float f(int x);
+int main() {
+    mpf_set_default_prec(1000000); // define a precisão padrão para 1000000 bits
+    mpf_t e, term;
+    mpf_init_set_ui(e, 1);
+    mpf_init_set_ui(term, 1);
+    int i, nthreads;
+    mpf_t *partials;
 
-int main(int argc, char *argv[]){
-        double global_result = 0.0;
-        int n=1000;
-        int thread_count;
+    #pragma omp parallel
+    {
+        int tid = omp_get_thread_num();
+        mpf_t partial;
+        mpf_init(partial);
+        mpf_set_ui(partial, 0);
 
-        thread_count = strtol(argv[1],NULL,10);
+        #pragma omp single
+        nthreads = omp_get_num_threads();
 
-        #pragma omp parallel num_threads(thread_count)
-        Euler(n,&global_result);
-        printf("%.100e\n",global_result);
-        return 0;
-}
-void Euler(int n, double *global_result_p){
-        double x,my_result=0.0;
-        int i,local_n;
-        int my_rank = omp_get_thread_num();
-        double thread_count = omp_get_num_threads();
-
-        local_n = n/thread_count;
-
-        for(i=((my_rank-1)*500);i<=(my_rank*500);i++){
-            my_result+=1/(f(i));
+        for (i = tid + 1; i <= 1000000; i += nthreads) {
+            mpf_div_ui(term, term, i); // term = term/i
+            mpf_add(partial, partial, term); // partial = partial + term
         }
 
         #pragma omp critical
-        *global_result_p += my_result;
-        
-}
-float f(int n)  
-{  
-  if (n == 0)  
-    return 1;  
-  else  
-    return(n * f(n-1));  
+        mpf_add(e, e, partial);
+
+        mpf_clear(partial);
+    }
+
+    gmp_printf("%.10000Ff\n", e);
+
+    mpf_clear(e);
+    mpf_clear(term);
+
+    return 0;
 }
