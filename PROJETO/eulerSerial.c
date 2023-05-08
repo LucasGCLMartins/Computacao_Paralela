@@ -1,20 +1,22 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <gmp.h>
 
-float fatorial(int n)  
-{  
-  if (n == 0)  
-    return 1;  
-  else  
-    return(n * fatorial(n-1));  
-} 
+int main() {
+    mpf_set_default_prec(1000000); // define a precisão padrão para 500 bits (cerca de 150 dígitos)
+    mpf_t e, term;
+    mpf_init_set_ui(e, 1);
+    mpf_init_set_ui(term, 1);
+    int i;
 
-int main(void) {
-  float euler=0;
-  
-  for(int i=0;i<1000;i++){
-    euler+=1/(fatorial(i));  
-  }
-  printf("%.30f",euler);
-  return 0;
+    for (i = 1; i <= 1000000; i++) {
+        mpf_div_ui(term, term, i); //term = term/i
+        mpf_add(e, e, term); //e = e + term
+    }
+
+    gmp_printf("%.10000Ff\n", e);
+
+    mpf_clear(e);
+    mpf_clear(term);
+
+    return 0;
 }
