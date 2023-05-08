@@ -15,22 +15,23 @@ E por fim rodando o executavel com o comando: ./serial
 - V1: Versão Serial e prints de execucao
 -
 # Tempo de execucao
---
 <table>
 <tr><th>Serial </th><th>Paralelo</th></tr>
 <tr><td>
 
 |&nbsp;|Minutos|Segundos|
+|--|--|--|
 |Real|1m9.452s|69.452s|
 |User|1m9.447s|69.447s|
 |Sys|0,000|0,000|
   
 </td><td>
 
-|&nbsp;|Minutos|Segundos|
-|Real|--|--|
-|User|--|--|
-|Sys|--|--|
+|&nbsp;|Teste 1|Teste 2| 
+|--|--|--|
+|Real|0|0,002|
+|User|0,002|0,002|
+|Sys|0,000|0,000|
   
 </td></tr> </table>
 
