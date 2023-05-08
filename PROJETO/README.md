@@ -20,16 +20,14 @@ E por fim rodando o executavel com o comando: ./serial
 <tr><th>Serial </th><th>Paralelo</th></tr>
 <tr><td>
 
-|&nbsp;|Teste|--|
-|--|Minutos|Segundos|
+|&nbsp;|Minutos|Segundos|
 |Real|1m9.452s|69.452s|
 |User|1m9.447s|69.447s|
 |Sys|0,000|0,000|
   
 </td><td>
 
-|&nbsp;|Teste|--|
-|--|--|--|
+|&nbsp;|Minutos|Segundos|
 |Real|--|--|
 |User|--|--|
 |Sys|--|--|
