@@ -10,12 +10,12 @@ apresentar os seguintes resultados na entrega: <br>
 Para executar o codigo serial, é necessario baixar a biblioteca GMP, usando o comando: sudo apt-get install libgmp3-dev<br>
 Depois, criar o executavel com o comando: gcc -o serial serial.c -lgmp<br>
 E por fim rodando o executavel com o comando: ./serial<br>
-- PARALELO
+- PARALELO:<br>
 Para criar o executavel]: gcc -o serial serial.c -lgmp -fopenmp<br>
 E por fim rodar o executavel com o comando: ./serial<br>
 # Patch Notes
 - V1: Versão Serial e prints de execucao
--
+- V2: Versao Paralela (apesar de possuir o resultado errado, ja apresenta um speedup melhor
 # Tempo de execucao
 <table>
 <tr><th>Serial </th><th>Paralelo</th></tr>
