@@ -6,7 +6,11 @@ apresentar os seguintes resultados na entrega: <br>
 • O tempo T que levou para atingir esse valor <br>
 
 # Como executar o código
-- Para executar o programa SERIAL é necessario primeiro compilar o codigo, após isso somente será preciso rodar o executável
+- SERIAL:<br>
+Para executar o codigo serial, é necessario baixar a biblioteca GMP, usando o comando: sudo apt-get install libgmp3-dev
+Depois, criar o executavel com o comando: gcc -o serial serial.c -lgmp
+E por fim rodando o executavel com o comando: ./serial
+- PARALELO
 # Patch Notes
 - V1: Versão Serial e prints de execucao
 -
@@ -16,11 +20,11 @@ apresentar os seguintes resultados na entrega: <br>
 <tr><th>Serial </th><th>Paralelo</th></tr>
 <tr><td>
 
-|&nbsp;|Teste 1|Teste 2|Teste 3|Média| 
-|--|--|--|--|--|
-|Real|0,009|0,006|0,006|0,007|
-|User|0,009|0,005|0,003|0,0056|
-|Sys|0,000|0,000|0,004|0,0013|
+|&nbsp;|Teste|--|
+|--|Minutos|Segundos|
+|Real|1m9.452s|69.452s|
+|User|1m9.447s|69.447s|
+|Sys|0,000|0,000|
   
 </td><td>
 
@@ -40,5 +44,5 @@ $$
 
 # Execucao na AWS
 - Serial <br>
-![image](https://user-images.githubusercontent.com/83303272/234407369-d955ad73-19cb-4169-9a94-5a76e0c8a231.png)
+![image](https://user-images.githubusercontent.com/83303272/236924653-10673381-236c-4dec-a30f-d841d6010f3b.png)
 
