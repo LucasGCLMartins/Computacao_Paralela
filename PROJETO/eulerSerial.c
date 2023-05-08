@@ -2,7 +2,7 @@
 #include <gmp.h>
 
 int main() {
-    mpf_set_default_prec(1000000); // define a precisão padrão para 500 bits (cerca de 150 dígitos)
+    mpf_set_default_prec(1000000); // define a precisão padrão para 1000000 bits
     mpf_t e, term;
     mpf_init_set_ui(e, 1);
     mpf_init_set_ui(term, 1);
