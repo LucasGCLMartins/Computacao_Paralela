@@ -28,11 +28,11 @@ E por fim rodando o executavel com o comando: ./serial
   
 </td><td>
 
-|&nbsp;|Teste 1|Teste 2|Teste 3|Média| 
-|--|--|--|--|--|
-|Real|--|--|--|--|
-|User|--|--|--|--|
-|Sys|--|--|--|--|
+|&nbsp;|Teste|--|
+|--|--|--|
+|Real|--|--|
+|User|--|--|
+|Sys|--|--|
   
 </td></tr> </table>
 
