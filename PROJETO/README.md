@@ -38,7 +38,7 @@ E por fim rodar o executavel com o comando: ./serial 2<br>
 </td></tr> </table>
 
 # Speedup
-- Serial V1 vs Paralelo Final
+
 $$
 S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{69.447}{11.504}=> S<sub>p</sub> = 6.036
 $$
