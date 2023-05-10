@@ -47,6 +47,7 @@ $$
 - Serial <br>
 ![image](https://user-images.githubusercontent.com/83303272/236924653-10673381-236c-4dec-a30f-d841d6010f3b.png)
 - Paralelo <br>
+![image](https://github.com/LucasGCLMartins/Computacao_Paralela/assets/83303272/6dfcd1a6-de0d-484f-9443-99d28c5418f8)
 
 
 
