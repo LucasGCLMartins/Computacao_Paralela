@@ -12,7 +12,7 @@ Depois, criar o executavel com o comando: gcc -o serial eulerSerial.c -lgmp<br>
 E por fim rodando o executavel com o comando: ./serial<br>
 - PARALELO:<br>
 Para criar o executavel: gcc -o paralelo eulerParaleloFinal.c -lgmp -fopenmp<br>
-E por fim rodar o executavel com o comando: ./serial 2<br>
+E por fim rodar o executavel com o comando: ./paralelo 2<br>
 # Patch Notes
 - V1: Versão Serial e prints de execucao
 - V2: Versao Paralela Final
