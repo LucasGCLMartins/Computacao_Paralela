@@ -49,5 +49,20 @@ $$
 - Paralelo <br>
 ![image](https://github.com/LucasGCLMartins/Computacao_Paralela/assets/83303272/6dfcd1a6-de0d-484f-9443-99d28c5418f8)
 
+# Decomposição de tarefas
+Considere o algoritmo desenvolvido para o projeto final e responda às seguintes perguntas:
 
+Quais são as tarefas no caminho crítico para cada grafo de dependência? Para responder a pergunta, apresente um DAG do seu projeto.
 
+Qual é o limite inferior do tempo de execução paralela para cada decomposição?
+   O limite inferior é igual ao        tempo minimo de execucao da        parte serial do codigo
+
+Quantos processadores são necessários para se conseguir o tempo mínimo de execução?
+   O numero de processadores deve      ser igual ao de threads, caso      contrario ocorrera perda de        performance
+
+Qual é o grau máximo de concorrência?
+   Ele é igual ao número de threads    do programa
+
+Qual é o paralelismo médio?
+Considere, para todos os exemplos, que todas as tarefas consomem uma unidade de tempo para execução.
+   69.447s / 11.504s = 6.03677
