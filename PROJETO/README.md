@@ -58,10 +58,10 @@ Qual é o limite inferior do tempo de execução paralela para cada decomposiç�
    O limite inferior é igual ao        tempo minimo de execucao da        parte serial do codigo
 
 Quantos processadores são necessários para se conseguir o tempo mínimo de execução?
-   O numero de processadores deve      ser igual ao de threads, caso      contrario ocorrera perda de        performance
+   O numero de processadores deve      ser igual ao de threads, caso      contrario ocorrera perda de        performance, nesse caso é 2
 
 Qual é o grau máximo de concorrência?
-   Ele é igual ao número de threads    do programa
+   Ele é igual ao número de threads    do programa, que é 2
 
 Qual é o paralelismo médio?
 Considere, para todos os exemplos, que todas as tarefas consomem uma unidade de tempo para execução.
