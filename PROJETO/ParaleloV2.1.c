@@ -41,7 +41,7 @@ void Euler(mpf_t *global_result_p) {
         mpf_add(my_result, my_result, term); // e = e + term
     }
 
-    #pragma omp atomic
+    #pragma omp atomic write
     mpf_add(*global_result_p, *global_result_p, my_result);
 
     mpf_clear(my_result);
