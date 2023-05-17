@@ -7,6 +7,9 @@ apresentar os seguintes resultados na entrega: <br>
 
 # Como executar o código
 - SERIAL:<br>
+Bibliotecas: 
+    sudo apt-get install libgmp3-dev
+    sudo apt-get install libc6-dev
 Para executar o codigo serial, é necessario baixar a biblioteca GMP, usando o comando: sudo apt-get install libgmp3-dev<br>
 Depois, criar o executavel com o comando: gcc -o serial eulerSerial.c -lgmp<br>
 E por fim rodando o executavel com o comando: ./serial<br>
