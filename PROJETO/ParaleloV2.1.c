@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <gmp.h>
-#include <omp.h>
+#include <omp.h> 
 
 void Euler(mpf_t *global_result_p); 
 
