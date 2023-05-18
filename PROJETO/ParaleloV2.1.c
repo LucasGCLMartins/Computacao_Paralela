@@ -36,9 +36,18 @@ void Euler(mpf_t *global_result_p) {
     mpf_init_set_ui(term, 1);
     int i;
 
-    for (i = 1; i <= local_n; i++) {
-        mpf_div_ui(term, term, i); // term = term/i
-        mpf_add(my_result, my_result, term); // e = e + term
+    if (my_rank == 0) {
+        // Primeira thread processa metade dos valores
+        for (i = 1; i <= local_n / 2; i++) {
+            mpf_div_ui(term, term, i);
+            mpf_add(my_result, my_result, term);
+        }
+    } else {
+        // Segunda thread processa a outra metade dos valores
+        for (i = local_n / 2 + 1; i <= local_n; i++) {
+            mpf_div_ui(term, term, i);
+            mpf_add(my_result, my_result, term);
+        }
     }
 
         #pragma omp critical
