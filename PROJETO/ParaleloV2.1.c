@@ -3,7 +3,7 @@
 #include <gmp.h>
 #include <omp.h>
 
-void Euler(mpf_t *global_result_p);
+void Euler(mpf_t *global_result_p); 
 
 int main(int argc, char *argv[]) {
     mpf_set_default_prec(1000000); // define a precisão padrão para 1000000 bits
