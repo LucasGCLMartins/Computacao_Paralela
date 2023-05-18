@@ -31,8 +31,8 @@ E por fim rodar o executavel com o comando: ./paralelo 2<br>
 
 |&nbsp;|Minutos|Segundos|
 |--|--|--|
-|Real|0m5.755s|5.755s|
-|User|0m11.504s|11.504s|
+|Real|0m8.793s|8.793s|
+|User|0m14.679s|14.679s|
 |Sys|0,000|0,000|
   
 </td></tr> </table>
@@ -40,14 +40,14 @@ E por fim rodar o executavel com o comando: ./paralelo 2<br>
 # Speedup
 
 $$
-S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{69.447}{11.504}=> S<sub>p</sub> = 6.036
+S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{69.447}{14.679=> S<sub>p</sub> = 4.731
 $$
 
 # Execucao na AWS
 - Serial <br>
 ![image](https://user-images.githubusercontent.com/83303272/236924653-10673381-236c-4dec-a30f-d841d6010f3b.png)
 - Paralelo <br>
-![image](https://github.com/LucasGCLMartins/Computacao_Paralela/assets/83303272/6dfcd1a6-de0d-484f-9443-99d28c5418f8)
+![image](https://github.com/LucasGCLMartins/Computacao_Paralela/assets/83303272/fba8962a-50cc-41c0-9c51-467f3c806a65)
 
 # Decomposição de tarefas
 Considere o algoritmo desenvolvido para o projeto final e responda às seguintes perguntas:
