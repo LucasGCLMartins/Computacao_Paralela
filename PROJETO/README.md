@@ -40,7 +40,7 @@ E por fim rodar o executavel com o comando: ./paralelo 2<br>
 # Speedup
 
 $$
-S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{69.447}{14.679=> S<sub>p</sub> = 4.731
+S<sub>p</sub> = \frac{T(1)}{T(N)} => S<sub>p</sub> = \frac{69.447}{14.679}=> S<sub>p</sub> = 4.731
 $$
 
 # Execucao na AWS
