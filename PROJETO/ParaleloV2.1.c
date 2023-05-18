@@ -1,16 +1,26 @@
 #include <stdio.h>
+
 #include <stdlib.h>
+
 #include <gmp.h>
+
 #include <omp.h>
+
 void Euler(mpf_t *global_result_p);
 
 int main(int argc, char *argv[]) {
 
     mpf_set_default_prec(1000000); // define a precisão padrão para 1000000 bits
-    mpf_t e, term, global_result;
-    mpf_init_set_ui(e, 1);
-    mpf_init_set_ui(term, 1);
+
+    mpf_t e, term;
+
+    mpf_init_set_ui(e, 0); // Inicializa 'e' com 0 em vez de 1
+
+    mpf_init(term); // Remove a inicialização de 'term' com 1
+
     int thread_count = 2; // Defina o número de threads para 2
+
+    mpf_t global_result;
 
     mpf_init_set_ui(global_result, 0);
 
@@ -18,7 +28,7 @@ int main(int argc, char *argv[]) {
 
     Euler(&global_result);
 
-    mpf_div_ui(global_result, global_result, thread_count);
+    mpf_add_ui(global_result, global_result, 1); // Adiciona 1 ao resultado final
 
     gmp_printf("%.10000Ff\n", global_result);
 
@@ -40,7 +50,7 @@ void Euler(mpf_t *global_result_p) {
 
     int thread_count = omp_get_num_threads();
 
-    mpf_init_set_ui(my_result, 1);
+    mpf_init_set_ui(my_result, 0); // Inicializa 'my_result' com 0 em vez de 1
 
     int local_n;
 
@@ -80,12 +90,5 @@ void Euler(mpf_t *global_result_p) {
 
     mpf_add(*global_result_p, *global_result_p, my_result);
 
-    mpf_clear(my_result);
-
-    mpf_clear(term);
-
 }
 
-
-    
-        
