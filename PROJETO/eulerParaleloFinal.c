@@ -19,7 +19,6 @@ int main(int argc, char *argv[]) {
     #pragma omp parallel num_threads(thread_count)
     Euler(&global_result);
 
-    mpf_div_ui(global_result,global_result,thread_count);
     gmp_printf("%.10000Ff\n",global_result);
 
     mpf_clear(e);
@@ -42,9 +41,11 @@ void Euler(mpf_t *global_result_p){
         mpf_init_set_ui(term, 1);
         int i;
 
-        for (i = 1; i <= local_n; i++) {
-          mpf_div_ui(term, term, i); //term = term/i
-          mpf_add(my_result, my_result, term); //e = e + term
+        for (i = 1; i <= (my_rank+1)* local_n; i++) {
+          mpf_div_ui(term, term, i); //term =  term / i
+          if(i>((my_rank)*local_n)+1){
+                mpf_add(my_result, my_result, term); //e = e + term
+        }
         }
         #pragma omp critical
         mpf_add(*global_result_p,*global_result_p, my_result);
