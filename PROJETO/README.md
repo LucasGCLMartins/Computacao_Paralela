@@ -52,7 +52,10 @@ $$
 # Decomposição de tarefas
 Considere o algoritmo desenvolvido para o projeto final e responda às seguintes perguntas:
 
-Quais são as tarefas no caminho crítico para cada grafo de dependência? Para responder a pergunta, apresente um DAG do seu projeto.
+Quais são as tarefas no caminho crítico para cada grafo de dependência? Para responder a pergunta, apresente um DAG do seu projeto.<br>
+
+![image](https://github.com/LucasGCLMartins/Computacao_Paralela/assets/83303272/971b8cdd-7d5a-49db-98e9-c03f53a1d50d)
+
 
 Qual é o limite inferior do tempo de execução paralela para cada decomposição?
    O limite inferior é igual ao        tempo minimo de execucao da        parte serial do codigo
@@ -65,7 +68,7 @@ Qual é o grau máximo de concorrência?
 
 Qual é o paralelismo médio?
 Considere, para todos os exemplos, que todas as tarefas consomem uma unidade de tempo para execução.
-   69.447s / 11.504s = 6.03677
+   69.447s / 14.679s = 4.731
 # Programa paralelo
 A lógica utilizada para a versão paralela foi a seguinte:<br>
 
