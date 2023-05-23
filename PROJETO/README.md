@@ -66,3 +66,9 @@ Qual é o grau máximo de concorrência?
 Qual é o paralelismo médio?
 Considere, para todos os exemplos, que todas as tarefas consomem uma unidade de tempo para execução.
    69.447s / 11.504s = 6.03677
+# Programa paralelo
+A lógica utilizada para a versão paralela foi a seguinte:<br>
+
+![image](https://github.com/LucasGCLMartins/Computacao_Paralela/assets/83303272/8bf2f30a-092c-4dcd-9fb1-820946e15d45)
+
+Ao usar 2 threads, por exemplo, o total de iteracoes (10000) é dividido por 2, cada thread realizando uma metade. Toda thread que nao é a primeira, também comecara a partir do indice 1 para ser possivel calcular o fatorial do seus numeros. Esse fatorial, tambem, é calculado a cada loop, inves de ser feita em uma funcao separada, diminuindo o seu tempo de execucao.
