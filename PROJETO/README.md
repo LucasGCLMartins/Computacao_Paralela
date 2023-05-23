@@ -55,6 +55,7 @@ Considere o algoritmo desenvolvido para o projeto final e responda às seguintes
 Quais são as tarefas no caminho crítico para cada grafo de dependência? Para responder a pergunta, apresente um DAG do seu projeto.<br>
 
 ![image](https://github.com/LucasGCLMartins/Computacao_Paralela/assets/83303272/971b8cdd-7d5a-49db-98e9-c03f53a1d50d)
+
 T1: Chama a funcao Main e a funcao de Euler. <br>
 T2 e T3: Quantidade de threads, para mais threads, mais tarefas. Realizando a funcao de loop e fatorial. Elas se juntam na T4.<br>
 T4: Tarefa que é a soma das outras duas tarefas, finalizacao do programa e mostra o resultado de Euler. <br>
