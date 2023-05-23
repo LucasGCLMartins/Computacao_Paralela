@@ -79,3 +79,18 @@ A lógica utilizada para a versão paralela foi a seguinte:<br>
 ![image](https://github.com/LucasGCLMartins/Computacao_Paralela/assets/83303272/8bf2f30a-092c-4dcd-9fb1-820946e15d45)
 
 Ao usar 2 threads, por exemplo, o total de iteracoes (10000) é dividido por 2, cada thread realizando uma metade. Toda thread que nao é a primeira, também comecara a partir do indice 1 para ser possivel calcular o fatorial do seus numeros. Esse fatorial, tambem, é calculado a cada loop, inves de ser feita em uma funcao separada, diminuindo o seu tempo de execucao.
+
+# Biblioteca GMP
+- 'mpf_set_default_prec' -> Aloca memoria para tantos bits de precisao, cada vez que um numero for criado usando a funcao 'mpf_init_set_ui', será usado essa quantidade de bits.
+- 'mpf_t' -> cria a variavel.
+- 'mpf_init_set_ui' ->  mpf_init_set_ui (mpf_t rop, unsigned long int op) -> 'mpf_t rop' será a quantidade de bits que foi definida na funcao anterior e, no codigo, onde será colocado a variavel que desejamos. 'unsigned long int op' é o valor que desejamos dar para a variavel.
+- 'gmp_printf' -> Funcao que imprime um numero da biblioteca gmp, no codigo, é feita uma precisao de 10000 numeros apos a virgula, usando a flag F, que converte em float. Exemplo usado em codigo: gmp_printf("%.10000Ff\n",global_result);
+- mpf_div_ui -> mpf_div_ui (mpf_t rop, const mpf_t op1, unsigned long int op2) -> Faz a divisao entre o numero const op1/unsigned long op2 e armazena em rop. Escolhemos essa funcao dentre as outras disponiveis pois op2 pode chegar até o fatorial de 10000, mas as putras funcoes trariam o mesmo resultado.
+- mpf_add -> mpf_add (mpf_t rop, const mpf_t op1, const mpf_t op2) -> Realiza funcao de soma entre const op1 e const op2 e armazena em rop.
+- mpf_clear -> Limpa o espaco de memoria que o numero mpf_t estava armazenado.
+
+# GMP Library
+https://gmplib.org/manual/Formatted-Output-Strings <br>
+https://gmplib.org/manual/Initializing-Floats <br>
+https://gmplib.org/manual/Simultaneous-Float-Init-_0026-Assign <br>
+https://gmplib.org/manual/Float-Arithmetic <br>
