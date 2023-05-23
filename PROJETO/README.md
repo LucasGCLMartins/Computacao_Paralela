@@ -81,6 +81,7 @@ A lógica utilizada para a versão paralela foi a seguinte:<br>
 Ao usar 2 threads, por exemplo, o total de iteracoes (10000) é dividido por 2, cada thread realizando uma metade. Toda thread que nao é a primeira, também comecara a partir do indice 1 para ser possivel calcular o fatorial do seus numeros. Esse fatorial, tambem, é calculado a cada loop, inves de ser feita em uma funcao separada, diminuindo o seu tempo de execucao.
 
 # Biblioteca GMP
+A biblioteca GMP é usada para a aritmetica de alta precisao. Abaixo, sao as funcoes que usamos em nosso codigo:
 - 'mpf_set_default_prec' -> Aloca memoria para tantos bits de precisao, cada vez que um numero for criado usando a funcao 'mpf_init_set_ui', será usado essa quantidade de bits.
 - 'mpf_t' -> cria a variavel.
 - 'mpf_init_set_ui' ->  mpf_init_set_ui (mpf_t rop, unsigned long int op) -> 'mpf_t rop' será a quantidade de bits que foi definida na funcao anterior e, no codigo, onde será colocado a variavel que desejamos. 'unsigned long int op' é o valor que desejamos dar para a variavel.
